@@ -10,9 +10,9 @@ import java.io.Serializable;
  * @author: wuyb
  * Date: 2021/12/10
  */
-@NoArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
 public class RespResult<T> implements Serializable {
     private T data;
     private Integer code;
