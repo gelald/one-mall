@@ -3,17 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>one-mall</artifactId>
+        <artifactId>mall-service</artifactId>
         <groupId>com.ng.mall</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mall-service</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>mall-goods-service</module>
-    </modules>
+    <artifactId>mall-goods-service</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -23,12 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>com.ng.mall</groupId>
-            <artifactId>mall-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.ng.mall</groupId>
-            <artifactId>mall-service-dependency</artifactId>
+            <artifactId>mall-goods-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>

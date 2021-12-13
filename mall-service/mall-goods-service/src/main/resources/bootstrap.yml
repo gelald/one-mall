@@ -1,0 +1,29 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: mall-goods-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/shop_goods?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        server-addr: localhost:8848
+      discovery:
+        server-addr: localhost:8848
+
+mybatis-plus:
+  # mapper.xml文件的位置
+  mapper-locations: mapper/*.xml
+  # 实体的包路径
+  type-aliases-package: com.ng.mall.*.entity
+  configuration:
+    # 把下划线转换为驼峰命名规则
+    map-underscore-to-camel-case: true
+    # 日志打印
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
